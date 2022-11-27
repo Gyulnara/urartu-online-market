@@ -240,12 +240,19 @@ nav {
 }
 
 .novelties-title,
+.similar-title,
 .sale-title {
     color: #333333;
     text-align: center;
     text-transform: uppercase;
     font-size: 30px;
     margin-bottom: 45px;
+}
+
+.similar-title {
+    text-align: left;
+    max-width: 1420px;
+    margin: 0 auto 38px;
 }
 
 .sale-div {
@@ -255,6 +262,10 @@ nav {
 
 .sale-div .resp-div {
     background-color: white;
+}
+
+.responsive .slick-track {
+    display: flex;
 }
 
 .novelties-parent {
@@ -531,12 +542,12 @@ nav {
 }
 
 .responsive .slick-slide {
-    margin: 0 27px;
+    margin: 0 24px;
 }
 
 
 .responsive .slick-list {
-    margin: 0 -27px;
+    margin: 0 -24px;
 }
 
 .news-div,
@@ -549,14 +560,24 @@ nav {
 }
 
 .news-div .resp-div,
-.sale-div .resp-div {
+.sale-div .resp-div,
+.similar-product-div .resp-div {
     height: 331px;
     display: flex !important;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     border: 1px solid #DDDCDC;
-    padding: 0 35px;
+    padding: 0 8px;
+}
+
+.news-div .resp-div>img,
+.sale-div .resp-div>img {
+    max-height: 110px;
+    max-width: 120px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
 }
 
 .news-div-title,
@@ -567,13 +588,19 @@ nav {
     margin-bottom: 10px;
 }
 
-.news-div .resp-div>img,
-.sale-div .resp-div>img {
+.link-to-product>img {
     max-height: 110px;
     max-width: 120px;
     margin: 0 auto;
     width: 100%;
     height: 100%;
+}
+
+.link-to-product {
+    color: inherit;
+    display: block;
+    height: 70%;
+    width: 100%;
 }
 
 .basket-arrow {
@@ -636,7 +663,8 @@ nav {
 }
 
 .news-div del,
-.sale-div del {
+.sale-div del,
+.similar-product-div del {
     color: #9E9A99;
     font-size: 14px;
 }
@@ -851,4 +879,257 @@ nav {
 
 .category-names-and-svg>div:hover svg image {
     filter: invert(32%) sepia(36%) saturate(1172%) hue-rotate(179deg) brightness(93%) contrast(95%);
+}
+
+
+/* ------product-single-page--- */
+.similar-product-div {
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.product__slider-main {
+    margin-bottom: 15px;
+}
+
+.product__slider-main img {
+    margin: 0 auto;
+}
+
+.product__slider-thmb .slick-slide {
+    opacity: 0.5;
+    transition: all .3s ease;
+}
+
+.product__slider-thmb .slick-slide.slick-active,
+.product__slider-thmb .slick-slide:hover {
+    opacity: 1;
+}
+
+.product__slider-main,
+.product__slider-thmb {
+    display: none;
+}
+
+.product-detail{
+    margin-top: 60px;
+}
+.product-detail-container {
+    max-width: 1420px;
+    border-bottom: 1px solid #EDEDED;
+    padding-bottom: 60px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-detail-slider {
+    max-width: 541px;
+    width: 100%;
+}
+
+.product-detail-info {
+    max-width: 853px;
+    width: 100%;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    /* width: 100px;
+    height: 40px; */
+}
+
+.control .bttn-left {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.control .input {
+    width: 72px;
+    height: 32px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    border-top: 1px solid #EDEDED;
+    border-bottom: 1px solid #EDEDED;
+    border-left: none;
+    border-right: none;
+}
+
+.control a.bttn {
+    color: black;
+    text-decoration: none;
+}
+
+.control a.bttn,
+.control .bttn {
+    cursor: pointer;
+    width: 38px;
+    height: 28px;
+    padding: 0;
+    text-align: center;
+    border: 1px solid #EDEDED;
+    box-shadow: none;
+    background-color: white;
+    font-size: 24px;
+}
+
+.control a.bttn span,
+.control .bttn span {
+    margin: auto !important;
+}
+
+.control .bttn-right {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.prodcut-detail-block {
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.product-detail-title {
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.product-detail-price {
+    padding-bottom: 35px;
+    font-weight: normal;
+    border-bottom: 1px solid #EDEDED;
+}
+
+
+.product-detail-description-block {
+    padding: 30px 0;
+    font-size: 18px;
+    color: #747474;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.product-detail-description {
+    margin-bottom: 30px;
+}
+
+.product-quantity {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.choose-count {
+    font-size: 15px;
+    color: #333333;
+    margin-right: 163px;
+}
+
+.product-detail-basket .basket-part {
+    max-width: 518px;
+    width: 100%;
+    height: 42px;
+    border: 1px solid #EDEDED;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 2px #e8eaee;
+    font-size: 18px;
+}
+
+.product-detail-basket .basket-part a {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.product-detail-basket .basket-part img {
+    margin-right: 20px;
+}
+
+
+
+.product-detail-action {
+    margin-top: 25px;
+    max-width: 518px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-detail-wishlist {
+    max-width: 291px;
+    width: 100%;
+}
+
+.product-detail-compare {
+    max-width: 197px;
+    width: 100%;
+}
+
+.product-detail-wishlist .wishlist-part,
+.product-detail-compare .compare-part {
+    height: 42px;
+    width: 100%;
+    border: 1px solid #EDEDED;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 2px #e8eaee;
+    font-size: 18px;
+}
+
+.product-detail-wishlist img,
+.product-detail-compare img {
+    margin-right: 10px
+}
+
+
+.product-detail-wishlist .wishlist-part a,
+.product-detail-compare .compare-part a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-detail-wishlist .wishlist-part a {
+    color: #ee3049;
+}
+
+.product-detail-compare .compare-part a {
+    color: #222533;
+}
+
+.product-detail-slider .slick-initialized .slick-slide{
+    position: relative;
+    border: 1px solid #7E7B7B;
+}
+
+.product-detail-slider .product__slider-thmb .slick-slide img{
+    width: 100%;
+}
+
+.product-detail-slider .slick-track{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.made-in-armenia{
+    position: absolute;
+    bottom: 15px;
+    left: 13px;
+}
+.product-detail-code{
+    margin-top: 50px;
+    font-size: 15px;
+    color: #333333;
+}
+.product-detail-code p{
+    margin-bottom: 22px;
+}
+.product-detail-code a{
+    color: #2a58a5;
 }
