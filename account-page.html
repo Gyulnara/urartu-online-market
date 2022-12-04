@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <title>Account</title>
+</head>
+
+<body>
+    <header>
+        <!-- ----start of the lang part ----->
+        <div class="lang-full">
+            <div class="lang-part">
+                <div class="lang-img">
+                    <ul class="lang-list">
+                        <li>
+                            <a href="#">
+                                <img src="./img/arm.png" alt="arm">Arm
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/eng.png" alt="eng">Eng
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/rus.png" alt="rus">Rus
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="user-part">
+                    <div class="wishlist">
+                        <div class="wish">
+                            <a href="#">
+                                <img src="./img/likeBg.png" alt="likeBg">
+                            </a>
+                            <div>
+                                4
+                            </div>
+                        </div>
+                        <div class="exchange">
+                            <a href="#">
+                                <img src="./img/arrow.png" alt="arrow">
+                            </a>
+                            <div>
+                                4
+                            </div>
+                        </div>
+                        <a href="#" class="register">
+                            <img src="./img/user.png" alt="user">
+                            Մուտք/գրանցում
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ----end of the lang part ----->
+
+        <!-- -----start of the logo part--- -->
+        <div class="site-logo">
+            <div>
+                <a href="#">
+                    <img src="./img/urartu-logo.png" alt="urartu-logo">
+                </a>
+            </div>
+            <div class="search-part">
+                <input type="search" placeholder="Որոնել այստեղ" class="search">
+                <button>
+                    <img src="./img/magnifying-glass.png" alt="search">
+                </button>
+            </div>
+            <div class="telephone-number">
+                <ul>
+                    <li>
+                        <a href="tel:+37498-560-141">
+                            <img src="./img/telephone.png" alt="telephone">
+                            +37498-560-141
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+37491-560-141">
+                            <img src="./img/telephone.png" alt="telephone">
+                            +37491-560-141
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/clock.png" alt="clock">
+                            10:00 - 19:00
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="basket-full">
+                <div class="basket">
+                    <a href="#">
+                        <img src="./img/basketBG.png" alt="shopping-cart">
+                    </a>
+                    <div>4</div>
+                </div>
+                Զամբյուղ
+            </div>
+        </div>
+        <!-- -----end of the logo part--- -->
+
+        <!-- ---start of the menu--- -->
+        <nav>
+            <ul class="general-menu">
+                <li>
+                    <a href="#">Սպասք</a>
+                </li>
+                <li>
+                    <a href="#">Խոհանոցային պարագաներ</a>
+                </li>
+                <li>
+                    <a href="#">Տնտեսական ապրանքներ</a>
+                </li>
+                <li>
+                    <a href="#">Հիգիենայի պարագաներ</a>
+                </li>
+                <li>
+                    <a href="#">Կոսմետիկա</a>
+                </li>
+                <li>
+                    <a href="#">Գալանտերեա</a>
+                </li>
+                <li>
+                    <a href="#">Տան պարագաներ</a>
+                </li>
+                <li>
+                    <a href="#">Տեխնիկա</a>
+                </li>
+                <li>
+                    <a href="#">Գրենական պիտույքներ</a>
+                </li>
+                <li>
+                    <a href="#">Խաղալիքներ և հուշանվերներ</a>
+                </li>
+                <li>
+                    <a href="#">Զատիկ</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- ---end of the menu--- -->
+    </header>
+
+
+    <section class="tabs-block">
+        <div class="tab">
+            <div class="user-name">
+                Անուշ Բունիաթյան
+            </div>
+            <div class="tab-holder">
+                <button class="tablinks" onclick="openAccountDetail(event, 'my-orders')" id="defaultOpen">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16"
+                        height="18" viewBox="0 0 16 18">
+                        <image id="shopping-bag" width="16" height="18"
+                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAABKElEQVQ4jZ3Uu0oDURDG8V+CV8RKm4B4J76ElYUW9tZWPobPIBYWIvoMgj6BIBZiIWJp4f1+QUPQiMoJEwkpQjYDh13Ozv73m+/MrCaxhU984ATFZsmNsYYnLGAau7hv9eVRlNDZsH+MpcbkjrjmMIxBTKGCfkzgJ9RcYAZ7yOMM5RpoBL+R+IpvPOAx1kMkl6OUd6zXK5nDYaiYxTP6UIiV1OxgM0pbxH66r5VQDEmXIXkjfCjVfWQbL1HeAZbRXXu4ipUMp9SFNwzkY2MS1xkAX+FTTz3gKgNAGPoPGMuoQPjTWwMkM28yAm4xlI9jSs7fZQScYzwfTVSJI2obkCYuayTTq4DU76dtAFLJhWReGp7U60lJatlWozpsCZB+GvM4yqggh9wfv2hEQ8g1/VwAAAAASUVORK5CYII=" />
+                    </svg>
+                    Իմ պատվերները
+                </button>
+                <button class="tablinks" onclick="openAccountDetail(event, 'my-account')">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16"
+                        height="18" viewBox="0 0 16 18">
+                        <image id="user_1_" data-name="user (1)" width="16" height="18"
+                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAABZUlEQVQ4jZ3TP0jVURQH8I+ZQYuDKbq4ZFqQoPBAUHQLmyzUIbegaCnIzdnN0aklUXBWWxpczD8JKTgr+KclSCqImiJQKQ7cB4/Lez/BA3e4957v93zvOd9bVyqVVIlxzKIxXX3BBA7y1GtVwC+xjCU8xGN8xj568+Tr2b4Nb/AI7yvOtzCHPTQUKXiNrxm4HC9SwYEigjtJbq34ia4igjUM1QDfxC1sFxG8RR0WqhCEst1cYd7EiHr8TW9dTZWf4BT9eXKuYATDuIFFhEnuYhL3kz9Gain4iG5c4BueYibdBdERmlLR/XKvygqW00E7WrCDzUQUayN5oTnlDOJdAMPKMZZDdOKkQlFDxcw/4aziriPl3osnPMPvDCwBtqo0WZrELzyPJ/ThuEZiUURPeoKgFT+uQPA9jBUEf3D7CgTRh7PowRTWMY0VnF8CDMxY8sWD2MSI4s/P4xX+XUIQVo81ig//Ac1lQ8qzsRMkAAAAAElFTkSuQmCC" />
+                    </svg>
+                    Իմ հաշիվը
+                </button>
+                <button class="tablinks" onclick="openAccountDetail(event, 'addresses')">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14"
+                        height="18" viewBox="0 0 14 18">
+                        <image id="placeholder" width="14" height="18"
+                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAASCAYAAABrXO8xAAABmElEQVQ4jXXTT2jPcRgH8Nd+TWkmLcVhiovksk0/YVs4EHKiNYc5mnaQv0W5qt122FZKToRc/CtyQraYhAsHB+3AQQ4oQkSmR8+nvvuZ9+n7+Xye9/Pv/f421et1FczHCPqxOK9/YBIn8KKENldIXbiLGs7n91d0YD+e4zDGq8R2PMZF7DMb9zCKPlzBT5ypZcg1XMVQntfjFh7iQN7F+w6cRlstg9biGH5hDx5hCT5ltUuYl9Xv4GAQd+Mp3mXmCxjEOuzE0ky2Kdu8jr1BXIUnSVqRW4w2Cz7iHDbm+RVWBvELFlWCWrCwYUHL8y2wILYdxIkcOvA5Z7iBNViGMWyodNGL+2GAltRrcwodwt9EN2Zyri14gNY0wVDo+C0FP4IpfEAPVucIz5Is74M8WQxwHG/RmYGBl/5FyHIK34sB3mM4nfE/jOWCwgAKcSaJIcXZOYhbcSh1/d1o8phjG17npqOtQEhzG0cxXYJLxYI3GEizx7yROGYO4t8WC6oVCy7nrxRuitVHa7sag+YiBk6mybdnktnAHzEcXs0atfTdAAAAAElFTkSuQmCC" />
+                    </svg>
+                    Հասցեներ
+                </button>
+                <button class="tablinks" onclick="openAccountDetail(event, 'attached-cards')">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18"
+                        height="12" viewBox="0 0 18 12">
+                        <image id="credit-card_copy_2" data-name="credit-card copy 2" width="18" height="12"
+                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAMCAYAAABvEu28AAAA9ElEQVQokZ3Sr0pEURDH8c/qVUEsgkkE/6zBYJGLmC0GgyDYfACTVYwLm3arD2CwK/gIRotJRUSTJoOCxSCuDJwLl8sNu/cH58DMOfOdmTOnlef5HB4xhZbR9YvDDA84x0kDSOgAVwGaxTpuG4I+MJmldqKiaYw1AL1jN0AD7GC8IegrtiwZq5gYMjCSveEbS5gvQHGwPWIVa9jERbIHWenwKMaYWi2SXKNXgSzjDi/ooF1uLbSAlQposaaaDXxiH/eFswx6xVMF9FwDukQfN+iWQT84xln6BsMohlNoC38B2ktvcRqOCiUGUfcl4l6siJ9B5x/PeiiocLlLTQAAAABJRU5ErkJggg==" />
+                    </svg>
+                    Կցված քարտեր
+                </button>
+                <button class="tablinks" onclick="openAccountDetail(event, 'change-password')">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14"
+                        height="18" viewBox="0 0 14 18">
+                        <image id="padlock" width="14" height="18"
+                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAASCAYAAABrXO8xAAABMUlEQVQ4jX3TvytHYRTH8Rd9EYOFlGTxL3yTkWRRSAx+pPwHFoPJaLCxMCk/JrJZTGQzGAxKJpGyKDHJ7556rq7bc7+fut3b03mf8znnObeuWq0qaBIb6IjHb9jCAr6z0PoCtIpDnGEKY1jHPC7RngXmK47gCIM4LSRsxBUuMFusuImVBBT0jnHMoC0P9qALOwko0y2uo/0/sDXYxmMNMAzpBZ2p4fzUAH/y7woaMBoPl2PmUL2ocNaNfmyHqe5hOo67J+Eir4fY1leoOBfv7KAGkFcznrPsbwlbw3FbGhLwRyV+FO1NYBdPGIitvOcDyvrpwzEW0Rvt/VOlBAxLfRLXcAmvxYCyijdxucO2rKXuNwNTF3+H85LEpVaD9uOTUl0A7zGUsP0Zf9ymgqMWfPwCRVM7nC0UPfIAAAAASUVORK5CYII=" />
+                    </svg>
+                    Փոխել գաղտնաբառը
+                </button>
+                <button class="tablinks" onclick="openAccountDetail(event, 'sign-out')">
+                    <a href="index.html" class="sign-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18"
+                            height="18" viewBox="0 0 18 18">
+                            <image id="log-out" width="18" height="18"
+                                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABaklEQVQ4jZXUv0vVURjH8Zd5KXHxR0uIJEk0tJh8g3JR/A+UFgcn/wEdCoRoaRGHmgJpiJYaWsVFB8E7Ca6KIOYgQWI1aYUNGgeei18ux3uvDxw45znnvL/Pj8/3tBVF8RpjeIA7+I1lHGIQt3CBPnzEkoxVMIER3MUkHqMD3zFfunIfK1jD13pUJZwpit0YIsI36MRC+Paxg/4c6EaMetvAOzyt87fjLJdaDlKzXvyq8/WU7sxGOZqC2jK+lNKfmKcUt9EtanQdmymdfYGt6PBEq6D09Vf4G3JItTqPBjxMkbYK+ocD/EBXwFLRT2JdbRV0jMWM/y2+YLpRsXO2WpLEB4wniCZdy9l5yfcZw7XFdUFlMa6XNxqBcipO2rqZO1yJCzk7jT/+UewN4R72rgIlmb/Ee/ws7X2LGqQXIEWS2jyHo6tASa0JNBptruITnoRypxqkf5lzURS1+QCeBSC9R7fxHJtNKfgPYDs/pZAE2MoAAAAASUVORK5CYII=" />
+                        </svg>
+                        Դուրս գալ հաշվից</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="tab-inner">
+            <div id="my-orders" class="tabcontent">
+                <div class="my-orders">
+                    Իմ պատվերները
+                </div>
+                <div class="order-info">
+                    <div class="order-div">
+                        <div class="process-type">
+                            <button class="order-btn in-the-process">Ընթացքի մեջ</button>
+                            <p class="order-date">26/04/2022</p>
+                        </div>
+                        <div class="order-table-container">
+                            <table class="order-table">
+                                <tr>
+                                    <th class="order-tr">Պատվեր</th>
+                                    <th class="count-tr">Քանակ</th>
+                                    <th class="order-money">Գումար</th>
+                                </tr>
+                                <tr>
+                                    <td class="order-tr">Պատվեր #123456789</td>
+                                    <td class="count-tr">2 ապրանք</td>
+                                    <td class="order-money">11,220 Դ</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <a href="#" class="see-order">Տեսնել պատվերը</a>
+                    </div>
+                    <div class="order-div">
+                        <div class="process-type">
+                            <button class="order-btn delivered">Առաքված</button>
+                            <p class="order-date">26/04/2022</p>
+                        </div>
+                        <div class="order-table-container">
+                            <table class="order-table">
+                                <tr>
+                                    <th class="order-tr">Պատվեր</th>
+                                    <th class="count-tr">Քանակ</th>
+                                    <th class="order-money">Գումար</th>
+                                </tr>
+                                <tr>
+                                    <td class="order-tr">Պատվեր #987654</td>
+                                    <td class="count-tr">2 ապրանք</td>
+                                    <td class="order-money">56,500 Դ</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <a href="#" class="see-order">Տեսնել պատվերը</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="my-account" class="tabcontent">
+                <div class="my-account">
+                    Իմ հաշիվը
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17"
+                        height="17" viewBox="0 0 17 17">
+                        <image id="edit" width="17" height="17"
+                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAABKklEQVQ4jZ3Tq0pEURTG8d84IwZBMFgsBpvYpmhSQUyKwWARYYKXYDL7AnZl8A0UFIsgZhF8AIOXoFi8jsFiU9myZzgczpk5uNLaa+3951uXXapWq/5h26ihgc0KhnCAYfxk8MKdc8zH8x5Woz+A/XDhBD04yhFUxlX061hJ5fsCZBQb2O1QVVJB0i67CrSjuw3gFouVApCdHMADxvHRSUk9B3CDiQAQO59l5ahgLSP3GAEvzUCekqBgHaUMBWPox0w7yEjGGIPdYRpPmMNWM5FVzlJG7D42sRHPpaSAtJJeTKVi15hMAMTNbm13WslgXL4vnOEUh80p5FkaEjq+jAu8tnuYtDTkE8cF37YmFyDvsQ+heUW+wXec0lsSEqYR6l4oKh/PmP3z8Au9PzV200euBwAAAABJRU5ErkJggg==" />
+                    </svg>
+                </div>
+                <div class="account-info">
+                    <table class="account-table">
+                        <tr>
+                            <th>Անուն</th>
+                            <th>Ազգանուն</th>
+                            <th>Էլ. Փոստի հասցե</th>
+                            <th>Հեռախոսահամար</th>
+                        </tr>
+                        <tr>
+                            <td>Անուշ</td>
+                            <td>Բունիաթյան</td>
+                            <td>anushbuniatyan04@gmail.com</td>
+                            <td>099 00 81 13</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div id="addresses" class="tabcontent">
+                <h3>Tokyo</h3>
+                <p>Tokyo is the capital of Japan.</p>
+            </div>
+
+            <div id="attached-cards" class="tabcontent">
+                <h3>Tokyo</h3>
+                <p>Tokyo is the capital of Japan.</p>
+            </div>
+
+            <div id="change-password" class="tabcontent">
+                <div class="my-password">
+                    Իմ գաղտնաբառը
+                </div>
+                <div class="password-info">
+                    <form action="" class="change-pass-form">
+                        <div class="pass-div">
+                            <label for="old-password">
+                                Հին գաղտնաբառ
+                                <span class="asterisk">*</span>
+                            </label>
+                            <input type="password" name="old-password" id="old-password">
+                        </div>
+                        <div class="pass-div">
+                            <label for="new-password">
+                                Նոր գաղտնաբառ
+                                <span class="asterisk">*</span>
+                            </label>
+                            <input type="password" name="new-password" id="new-password">
+                        </div>
+                        <div class="pass-div">
+                            <label for="re-type-new-password">
+                                Կրկնել նոր գաղտնաբառը
+                                <span class="asterisk">*</span>
+                            </label>
+                            <input type="password" name="re-type-new-password" id="re-type-new-password">
+                        </div>
+                        <button type="submit" class="change-password">Փոխել</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------start of the footer--- ----- -->
+    <footer>
+        <div class="footer-links">
+            <div class="footer-container">
+                <div>
+                    <h3>Տեղեկություն</h3>
+                    <ul>
+                        <li><a href="#">Մեր մասին</a></li>
+                        <li><a href="#">Աշխատատեղեր</a></li>
+                        <li><a href="#">Նորույթներ/Բլոգ</a></li>
+                        <li><a href="#">Առաքման և վերադարձի պայմաններ</a></li>
+                        <li><a href="#">Գաղտնիության քաղաքականություն</a></li>
+                        <li><a href="#">Կապ</a></li>
+                        <li><a href="#">ՀՏՀ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Հաճախորդների սպասարկում</h3>
+                    <ul>
+                        <li><a href="#">Փնտրել</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Իմ հաշիվը</h3>
+                    <ul>
+                        <li><a href="#">Զամբյուղ</a></li>
+                        <li><a href="#">Ցանկությունների ցուցակ</a></li>
+                        <li><a href="#">Գրանցում</a></li>
+                        <li><a href="#">Համեմատում</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div>
+                        <h3>Վճարման տարբերակներ</h3>
+                        <ul>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Հետևել մեզ</h3>
+                        <ul>
+                            <li><a href=""><img src="" alt=""></a></li>
+                            <li><a href=""><img src="" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div></div>
+    </footer>
+    <!-- ---end of the footer----------- -->
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
