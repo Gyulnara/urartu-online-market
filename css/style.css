@@ -1291,12 +1291,13 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .tab-inner {
-    max-width: 1082px;
+    max-width: 1080px;
     width: 100%;
 }
 
 #my-orders,
 #my-account,
+#addresses,
 #change-password {
     background-color: #F1F1F1;
     border-radius: 10px;
@@ -1305,6 +1306,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .my-orders,
 .my-account,
+.my-addresses,
 .my-password {
     height: 70px;
     background: white;
@@ -1317,7 +1319,9 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 0 30px;
     font-weight: bold;
 }
-
+.change-data-icon{
+    cursor: pointer;
+}
 .order-info {
     max-width: 1023px;
     margin: 40px auto 0;
@@ -1489,4 +1493,217 @@ input[type=number]::-webkit-outer-spin-button {
     border: none;
     color: white;
     background-color: #2A58A5;
+}
+
+.address-detail {
+    padding: 25px 20px 25px 30px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #CCCCCC;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.is-active {
+    border: 1px solid #2956a3;
+}
+
+.is-active #checklist_copy {
+    filter: invert(55%) sepia(40%) saturate(5711%) hue-rotate(58deg) brightness(89%) contrast(80%);
+}
+
+.address-name {
+    display: flex;
+}
+
+.address-place {
+    margin-left: 25px;
+}
+
+.address-name-example {
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.address-actions {
+    display: flex;
+    align-items: flex-start;
+}
+
+.address-actions svg {
+    cursor: pointer;
+}
+
+.edit-address {
+    margin-right: 18px;
+}
+
+.add-new-address {
+    min-width: 224px;
+    margin-top: 25px;
+}
+
+.change-address,
+.add-address,
+.change-data,
+.order-data{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    top: 220px;
+    padding: 40px 25px 30px;
+    border-radius: 5px;
+    border-top: 4px solid #2956A3;
+    max-width: 500px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+.order-data{
+    max-width: 989px;
+}
+.is-open,
+.modal-open{
+    display: block;
+}
+
+.change-address-title,
+.add-address-title,
+.change-data-title,
+.order-data-title{
+    text-align: center;
+    font-size: 24px;
+}
+
+.address-form,
+.add-address-form,
+.change-data-form,
+.order-data-form {
+    margin-top: 32px;
+}
+
+.change-address .reg-div input,
+.add-address .reg-div input,
+.change-data-form .reg-div input {
+    max-width: 430px;
+    height: 32px;
+}
+
+.regeon-name {
+    max-width: 430px;
+    width: 100%;
+    height: 32px;
+    margin-left: 12px;
+    margin-top: 10px
+}
+
+.cancel-action {
+    background-color: #333333;
+    margin-left: 7px;
+}
+
+.change-address-btn .btn,
+.add-address-btn .btn,
+.change-data-btn .btn {
+    height: 38px;
+    font-size: 14px;
+}
+
+.change-add,
+.change-data-action {
+    margin-left: 0;
+}
+
+.order-data-img{
+    max-width: 630px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.order-popup{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+.order-popup{
+    border-bottom: 1px solid #cccccc;
+}
+.order-popup-img{
+    border: 1px solid #CCCCCC;
+    margin-right: 17px;
+}
+.order-popup-cost{
+    max-width: 123px;
+    width: 100%;
+}
+.order-popup-btn{
+    max-width: 102px;
+    width: 100%;
+}
+
+.order-popup-title{
+    color: #333333;
+}
+.order-popup-title p{
+    margin-bottom: 10px;
+}
+
+.order-popup-btn .basket-part{
+    background-color: white;
+}
+
+.order-popup-cost{
+    font-weight: bold;
+}
+
+.order-popup-data{
+    font-size: 14px;
+    margin-top: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.order-again{
+    font-size: 14px;
+    height: 38px;
+    max-width: 165px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-again-parent{
+    padding: 20px 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+.close-order-popup{
+    width: 91px;
+    height: 45px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    border: none;
+    text-transform: uppercase;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.8;
+    display: none;
+
 }
