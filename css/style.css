@@ -211,10 +211,12 @@ nav {
     top: 50%;
     position: absolute;
     z-index: 2;
-    background-color: #cccccc;
+    background-color: rgba(0, 0, 0, 0.3);
     opacity: 0.7;
     width: 59px;
     height: 59px;
+    color: white;
+    font-size: 30px;
     cursor: pointer;
     border: none;
 }
@@ -501,7 +503,25 @@ nav {
     color: #7E7B7B;
     font-size: 18px;
 }
-
+.footer-follow-link{
+    margin-top: 35px;
+}
+.copyright {
+    padding: 30px 0;
+    background-color: #333;
+}
+.copyright-text{
+    max-width: 1420px;
+    font-size: 18px;
+    margin: auto;
+    color: #7E7B7B;
+}
+.social-media{
+    display: flex;
+}
+.social-media li{
+    margin-right: 8px;
+}
 .main {
     font-family: Arial;
     width: 1420px;
@@ -1175,7 +1195,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .reg-div input,
 .shipping-form #shipping-region,
-.shipping-form #shipping-notes {
+.reg-div #shipping-notes {
     max-width: 511px;
     width: 100%;
     height: 38px;
@@ -1189,7 +1209,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 15px;
 }
 
-.shipping-form #shipping-notes {
+.reg-div #shipping-notes {
     height: 56px;
 }
 
@@ -1728,19 +1748,26 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* -----checkout page--- */
 
-.checkout-detail-block {
+.checkout-detail-block,
+.wishlist-detail-block {
     max-width: 1420px;
     width: 100%;
     margin: 58px auto;
 }
 
-.checkout-detail-title {
+.wishlist-detail-block {
+    margin: 88px auto;
+}
+
+.checkout-detail-title,
+.wishlist-detail-title {
     font-size: 18px;
     margin-bottom: 20px;
     font-weight: normal;
 }
 
-.checkout-table {
+.checkout-table,
+.wishlist-table {
     font-size: 18px;
     width: 100%;
     text-align: center;
@@ -1778,7 +1805,12 @@ input[type=number]::-webkit-outer-spin-button {
     color: #2956a3;
 }
 
-.checkout-table tr {
+.checkout-all img {
+    cursor: pointer;
+}
+
+.checkout-table tr,
+.wishlist-table tr {
     padding: 25px 0 10px;
     border-bottom: 1px solid #ededed;
     display: flex;
@@ -1786,7 +1818,8 @@ input[type=number]::-webkit-outer-spin-button {
     justify-content: space-between;
 }
 
-.checkout-table tr:last-child {
+.checkout-table tr:last-child,
+.wishlist-table tr:last-child {
     border: none;
 }
 
@@ -1794,17 +1827,20 @@ input[type=number]::-webkit-outer-spin-button {
     font-weight: bold;
 }
 
-.table-row-name {
+.checkout-table tr.table-row-name,
+.wishlist-table tr.table-row-name {
     border-top: 1px solid #ededed;
-    border-bottom: 1px solid #ededed;
+    border-bottom: 2px solid #ededed;
 }
 
-.checkout-table h4 {
+.checkout-table h4,
+.wishlist-table h4 {
     margin-top: 10px;
     font-weight: normal;
 }
 
-.checkout-table .control {
+.checkout-table .control,
+.wishlist-table .control {
     justify-content: center;
 }
 
@@ -1873,12 +1909,19 @@ input[type=number]::-webkit-outer-spin-button {
     margin-bottom: 32px;
 }
 
-.order-confirm {
+.order-confirm,
+.add-to-basket-block {
     margin-top: 45px;
     margin-bottom: 32px;
 }
 
-.order-confirm .confirm-order {
+.add-to-basket-block {
+    max-width: 690px;
+    margin-left: auto;
+}
+
+.order-confirm .confirm-order,
+.add-to-basket-block .add-to-basket {
     height: 50px;
     width: 100%;
     font-size: 18px;
@@ -1886,8 +1929,21 @@ input[type=number]::-webkit-outer-spin-button {
     color: white;
     background-color: #2956a5;
     border: none;
+    cursor: pointer;
 }
-.continue-shopping{
+
+.shipping-variant {
+    text-align: right;
+    display: none;
+}
+
+.shipping-condition {
+    font-size: 12px;
+    color: #2957a4;
+    font-weight: bold;
+}
+
+.continue-shopping {
     height: 50px;
     width: 100%;
     display: flex;
@@ -1898,6 +1954,193 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 18px;
 }
 
-.shipping-form{
+.checkout-user-info {
     display: none;
+}
+
+.standart-shipping-method {
+    max-width: 620px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.standart-shipping-method-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2957a4;
+}
+
+.change-user-shipping-info {
+    height: 34px;
+    max-width: 153px;
+    font-size: 13px;
+    width: 100%;
+    color: white;
+    background-color: #2956a5;
+    border: none;
+    cursor: pointer;
+}
+
+.user-shipping-filled-info {
+    max-width: 620px;
+    width: 100%;
+    margin: 35px 0 47px;
+}
+
+.user-shipping-filled-info tbody {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-shipping-filled-info tr {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    text-align: left;
+}
+
+.user-shipping-filled-info th,
+.user-shipping-filled-info td {
+    margin-bottom: 20px;
+    word-break: break-all;
+}
+
+.user-filled-data {
+    max-width: 402px;
+    width: 100%
+}
+
+.user-filled-data-note #shipping-notes {
+    max-width: 600px;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    border-radius: 4px;
+    outline: none;
+}
+
+
+/* --------order-confirmation--- */
+
+.order-confirmation-block {
+    max-width: 1420px;
+    width: 100%;
+    margin: 100px auto 90px;
+}
+
+.confirmed-table {
+    width: 100%;
+}
+
+.confirmed-table tbody {
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirmed-table tr {
+    display: flex;
+    flex-direction: column;
+    color: #333333;
+    width: 50%;
+}
+
+.confirmed-table th,
+.confirmed-table td {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #ededed;
+}
+
+.confirmed-table th {
+    text-align: left;
+    font-size: 17px;
+}
+
+.confirmed-table td {
+    font-size: 16px;
+    text-align: right;
+}
+
+.order-confirmed .reg-title {
+    margin-bottom: 0;
+}
+
+.order-confirmed-title {
+    font-size: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.confimed-blocks {
+    margin-top: 60px;
+}
+
+.about-us {
+    max-width: 1420px;
+    width: 100%;
+    margin: 99px auto 89px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.about-us-text {
+    background-color: white;
+    box-shadow: -0.87px 0.5px 27px #0000001c;
+    padding: 80px;
+    margin-top: -40px;
+}
+
+.about-title {
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.about-us-title {
+    font-size: 16px;
+    margin-bottom: 36px;
+}
+
+.about-urartu-shop-title {
+    font-size: 30px;
+    margin-bottom: 36px;
+}
+
+.about-us-info {
+    margin-bottom: 48px;
+}
+
+/* -----------404 page-------- */
+
+.not-found-page-block {
+    max-width: 1420px;
+    width: 100%;
+    margin: 114px auto 75px;
+    padding: 70px 0;
+    text-align: center;
+    background-color: white;
+    box-shadow: -0.87px 0.5px 27px #0000001c;
+}
+
+.not-found-page-title {
+    font-size: 22px;
+    margin: 50px 0 35px;
+    text-transform: uppercase;
+}
+
+.not-found-page-text {
+    font-size: 16px;
+    color: #717171;
+    text-transform: uppercase;
+}
+
+.back-to-home {
+    max-width: 442px;
+    width: 100%;
+    height: 50px;
+    margin: 48px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #333;
 }

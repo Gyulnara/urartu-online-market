@@ -37,7 +37,6 @@ $('.customer-logos').slick({
   dots: false,
   pauseOnHover: false,
   centerMode: true,
-  // variableWidth: true,
   responsive: [{
     breakpoint: 768,
     settings: {
@@ -51,10 +50,12 @@ $('.customer-logos').slick({
   }]
 });
 
+// $('.slider').slick();
 
-
-$('.slider').slick();
-
+$('.general-slider .slider').slick({
+  prevArrow: "<button type='button' class='slick-prev pull-left'><</button>",
+  nextArrow: "<button type='button' class='slick-next pull-right'>></button>"
+});
 
 $('.slider-nav').slick({
   slidesToShow: 3,
