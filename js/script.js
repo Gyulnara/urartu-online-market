@@ -51,10 +51,50 @@ $('.customer-logos').slick({
 });
 
 // $('.slider').slick();
+const rangeInput = document.querySelectorAll(".range-input input"),
+priceInput = document.querySelectorAll(".price-input input"),
+range = document.querySelector(".slider .progress");
+let priceGap = 1000;
+
+priceInput.forEach(input =>{
+    input.addEventListener("input", e =>{
+        let minPrice = parseInt(priceInput[0].value),
+        maxPrice = parseInt(priceInput[1].value);
+        
+        if((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max){
+            if(e.target.className === "input-min"){
+                rangeInput[0].value = minPrice;
+                range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
+            }else{
+                rangeInput[1].value = maxPrice;
+                range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+            }
+        }
+    });
+});
+
+rangeInput.forEach(input =>{
+    input.addEventListener("input", e =>{
+        let minVal = parseInt(rangeInput[0].value),
+        maxVal = parseInt(rangeInput[1].value);
+        if((maxVal - minVal) < priceGap){
+            if(e.target.className === "range-min"){
+                rangeInput[0].value = maxVal - priceGap
+            }else{
+                rangeInput[1].value = minVal + priceGap;
+            }
+        }else{
+            priceInput[0].value = minVal;
+            priceInput[1].value = maxVal;
+            range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
+            range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+        }
+    });
+});
 
 $('.general-slider .slider').slick({
-  prevArrow: "<button type='button' class='slick-prev pull-left'><</button>",
-  nextArrow: "<button type='button' class='slick-next pull-right'>></button>"
+  prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./img/prev-arrow.png'></button>",
+  nextArrow: "<button type='button' class='slick-next pull-right'><img src='./img/next-arrow.png'></button>"
 });
 
 $('.slider-nav').slick({
@@ -76,6 +116,8 @@ $('.responsive').slick({
   speed: 300,
   slidesToShow: 5,
   slidesToScroll: 1,
+  prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./img/prev-arrow-slider.png'></button>",
+  nextArrow: "<button type='button' class='slick-next pull-right'><img src='./img/next-arrow-slider.png'></button>",
   responsive: [
     {
       breakpoint: 1024,
@@ -100,9 +142,6 @@ $('.responsive').slick({
         slidesToScroll: 1
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ]
 });
 
@@ -115,7 +154,7 @@ if ($('.product__slider-main').length) {
     .slick({
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: true,
+      arrows: false,
       autoplay: false,
       lazyLoad: 'ondemand',
       autoplaySpeed: 3000,
@@ -131,9 +170,11 @@ if ($('.product__slider-main').length) {
       slidesToScroll: 1,
       lazyLoad: 'ondemand',
       asNavFor: '.product__slider-main',
-      dots: false,
       centerMode: false,
-      focusOnSelect: true
+      focusOnSelect: true,
+      arrows: true,
+      prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./img/prev-arrow-slider.png'></button>",
+      nextArrow: "<button type='button' class='slick-next pull-right'><img src='./img/next-arrow-slider.png'></button>",
     });
 
   //remove active class from all thumbnail slides
