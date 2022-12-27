@@ -38,22 +38,14 @@
                 <div class="user-part">
                     <div class="wishlist">
                         <div class="wish">
-                            <a href="#">
+                            <a href="wishlist.html">
                                 <img src="./img/likeBg.png" alt="likeBg">
                             </a>
                             <div>
                                 4
                             </div>
                         </div>
-                        <div class="exchange">
-                            <a href="#">
-                                <img src="./img/arrow.png" alt="arrow">
-                            </a>
-                            <div>
-                                4
-                            </div>
-                        </div>
-                        <a href="#" class="register">
+                        <a href="register.html" class="register">
                             <img src="./img/user.png" alt="user">
                             Մուտք/գրանցում
                         </a>
@@ -169,7 +161,7 @@
     <section class="checkout-detail">
         <div class="checkout-detail-block">
             <h3 class="checkout-detail-title">
-                Դուք ունեք <span class="count-of-order">2</span> ապրանքներ ձեր զամբյուղում
+                Դուք ունեք <span class="count-of-order">2 </span> ապրանք ձեր զամբյուղում
             </h3>
             <table class="checkout-table">
                 <tr class="table-row-name">
@@ -179,7 +171,7 @@
                     <th class="checkout-count">Քանակ</th>
                     <th class="checkout-all">Ընդամենը</th>
                 </tr>
-                <tr>
+                <tr class="product-row">
                     <td class="checkout-product">
                         <div>
                             <img src="./img/axaman-mini.png" alt="axaman-mini">
@@ -189,7 +181,7 @@
                         </div>
                     </td>
                     <td class="checkout-code code">460372705185</td>
-                    <td class="checkout-price">15,500Դ</td>
+                    <td class="checkout-price">15 500Դ</td>
                     <td class="checkout-count">
                         <div class="control">
                             <button type="button" id="sub2" class="sub bttn bttn-left">-</button>
@@ -197,11 +189,12 @@
                             <button type="button" id="add2" class="add bttn bttn-right">+</button>
                         </div>
                     </td>
-                    <td class="checkout-all code">15,500Դ
-                        <img src="./img/close-checkout.png" alt="close-checkout">
+                    <td class="checkout-all code">
+                        <p> <span class="checkout-product-price">15 500</span> Դ</p>
+                        <img src="./img/close-checkout.png" alt="close-checkout" class="close-checkout">
                     </td>
                 </tr>
-                <tr>
+                <tr class="product-row">
                     <td class="checkout-product">
                         <div>
                             <img src="./img/axaman-mini2.png" alt="axaman-mini">
@@ -219,8 +212,9 @@
                             <button type="button" id="add2" class="add bttn bttn-right">+</button>
                         </div>
                     </td>
-                    <td class="checkout-all code">950Դ
-                        <img src="./img/close-checkout.png" alt="close-checkout">
+                    <td class="checkout-all code">
+                        <p><span class="checkout-product-price">950</span> Դ</p>
+                        <img src="./img/close-checkout.png" alt="close-checkout" class="close-checkout">
                     </td>
                 </tr>
             </table>
@@ -325,19 +319,21 @@
                     <div class="order-sum">
                         <div class="order-sum-blocks">
                             <p>Ապրանքների արժեքը</p>
-                            <strong>16,450 Դ</strong>
+                            <strong class="total-price"></strong>
                         </div>
                         <div class="order-sum-blocks">
                             <p>Առաքման արժեքը</p>
-                            <strong>Անվճար</strong>
+                            <div class="free-or-not">
+                                <strong class="free-shiping">Անվճար</strong>
                             <div class="shipping-variant">
-                               <!-- designum 500d e orinak@ -->
+                                <!-- designum 500d e orinak@ -->
                                 <p class="shipping-condition">առաքումը անվճար է 5000դր և ավել գնումների դեպքում</p>
+                            </div>
                             </div>
                         </div>
                         <div class="order-sum-blocks">
                             <p>Ենթակա է վճարման</p>
-                            <strong>11,220 Դ</strong>
+                            <strong class="order-sum-price">11,220 Դ</strong>
                         </div>
                     </div>
                     <div class="order-confirm">
@@ -354,7 +350,7 @@
     <footer>
         <div class="footer-links">
             <div class="footer-container">
-                <div>
+                <div class="footer-information">
                     <h3>Տեղեկություն</h3>
                     <ul>
                         <li><a href="#">Մեր մասին</a></li>
@@ -366,13 +362,13 @@
                         <li><a href="#">ՀՏՀ</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="footer-customer-service">
                     <h3>Հաճախորդների սպասարկում</h3>
                     <ul>
                         <li><a href="#">Փնտրել</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="footer-account-info">
                     <h3>Իմ հաշիվը</h3>
                     <ul>
                         <li><a href="#">Զամբյուղ</a></li>
@@ -382,27 +378,30 @@
                     </ul>
                 </div>
                 <div>
-                    <div>
+                    <div class="footer-payment-option">
                         <h3>Վճարման տարբերակներ</h3>
-                        <ul>
-                            <li><img src="" alt=""></li>
-                            <li><img src="" alt=""></li>
-                            <li><img src="" alt=""></li>
-                            <li><img src="" alt=""></li>
-                            <li><img src="" alt=""></li>
-                        </ul>
+                        <img src="./img/cart-name.png" alt="cart-name">
                     </div>
-                    <div>
+                    <div class="footer-follow-link">
                         <h3>Հետևել մեզ</h3>
-                        <ul>
-                            <li><a href=""><img src="" alt=""></a></li>
-                            <li><a href=""><img src="" alt=""></a></li>
+                        <ul class="social-media">
+                            <li>
+                                <a href="#"><img src="./img/facebook.png" alt="facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="./img/instagram.png" alt="instagram"></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div></div>
+        <div class="copyright">
+            <p class="copyright-text">Copyright 2020 urartuonline.am</p>
+        </div>
+        <a href="#" class="live-chat">
+            <img src="./img/live-chat-icon.png" alt="live-chat-icon">
+        </a>
     </footer>
     <!-- ---end of the footer----------- -->
 

@@ -242,6 +242,49 @@ if ($('.product__slider-main').length) {
   }
 }
 
+function countOfOrder(){
+  var count=$(".count-of-order").text(($(".product-row").length));
+}
+countOfOrder()
+
+function totalPrice(){
+  var totalPrice = 0;
+  $(".checkout-product-price").each(function () {
+    var cenaEach = parseFloat($(this).text().split(" ").join(""));
+    totalPrice += cenaEach;
+});
+$(".total-price").text(totalPrice + " Դ");
+$(".order-sum-price").text(totalPrice + " Դ");
+if(totalPrice==0){
+  $('.free-shiping').text("")
+}
+else if(totalPrice<5000){
+  $('.shipping-variant').css("display","block")
+  $('.free-shiping').text("500 Դ")
+}
+}
+totalPrice()
+
+$(".close-checkout").on("click", function () {
+ var x = $(this).parents('.product-row').remove();
+ 
+  countOfOrder()
+  totalPrice()
+  // console.log($(".checkout-table").children().length)
+  // if(.length==0){
+  //   $(".checkout-table").remove()
+  // }
+  // console.log(x.length)
+  
+  // var totalPrice = 0;
+  // $(".eachPrice").each(function () {
+  //     var cenaEach = parseFloat($(this).text());
+  //     totalPrice += cenaEach;
+  // });
+  // $("#total-price").text(totalPrice + "$");
+  // $("#items-basket").text("(" + ($("#list-item").children().length) + ")");
+});
+
 
 function openAccountDetail(evt, cityName) {
   var i, tabcontent, tablinks;
@@ -268,6 +311,9 @@ document.getElementById("defaultOpen").click();
 //     box.classList.toggle('is-active');
 //   });
 // }
+
+
+
 
 var modalBackdrop = document.querySelector(".modal-backdrop")
 
@@ -346,3 +392,16 @@ cancelChangeData.addEventListener('click', function (e) {
   orderData.classList.remove("is-open")
   modalBackdrop.style.display = "none"
 });
+
+
+
+// function deleteRow(btn) {
+//   if(!confirm("Are you sure you want to delete?")) return;
+  
+//   // var tbl = el.parentNode.parentNode.parentNode;
+//   // var row = el.parentNode.parentNode.rowIndex;
+//   // tbl.deleteRow(row);
+//   var row = btn.parentNode.parentNode;
+//   row.parentNode.removeChild(row);
+// }
+
